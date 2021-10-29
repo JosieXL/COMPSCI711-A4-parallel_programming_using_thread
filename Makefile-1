@@ -1,0 +1,8 @@
+bb.out: main1.o functions.o factorial.o
+	g++ -o bb.out main1.o functions.o factorial.o
+main1.o: main1.cpp
+	g++ -o main1.o -c main1.cpp
+functions.o: functions.cpp functions.h
+	g++ -o functions.o -c functions.cpp
+factorial.o: factorial.cpp factorial.h
+	g++ -o factorial.o -c factorial.cpp
